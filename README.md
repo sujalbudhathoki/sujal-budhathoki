@@ -69,3 +69,38 @@ function sayHello() {
   alert('Hello from your custom script!');
 }
 
+## Features
+
+- Basic project structure for web, mobile, and PC app development
+- Easy-to-edit HTML, CSS, and JavaScript files
+- Ready for rapid prototyping and customization
+
+## Contributing
+
+Contributions are welcome!  
+To contribute:
+
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/YourFeature`)
+3. Make your changes
+4. Commit and push (`git commit -m 'Add feature'`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+**Sujal Budhathoki**  
+Email: [your-email@example.com]  
+[GitHub Profile](https://github.com/sujalbudhathoki)
+
+## Acknowledgements
+
+- Thanks to all contributors and the open-source community!
+- Inspired by developers who love to build and share.
+
+---
+
+**Start customizing and building your own awesome app today!**

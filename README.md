@@ -52,3 +52,20 @@ Modify the HTML structure, add elements, or update content.
   <script src="script.js"></script>
 </body>
 </html>
+
+### `style.css`
+Change colors, fonts, and layout to match your personal style.
+
+```css
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #333;
+}
+
+function sayHello() {
+  alert('Hello from your custom script!');
+}
+

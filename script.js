@@ -1,74 +1,50 @@
-// script.js
 
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll("nav ul li a");
-  const OFFSET = 80; // Adjust if you have a fixed header
+//
+// Scripts
+// 
 
-  // Smooth scroll with focus for accessibility
-  navLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
-      const targetId = this.getAttribute("href").slice(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        e.preventDefault();
-        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        setTimeout(() => targetSection.focus({ preventScroll: true }), 600);
-        history.replaceState(null, null, `#${targetId}`);
-      }
-    });
-  });
+window.addEventListener('DOMContentLoaded', event => {
 
-  // Improved scroll handler (debounced)
-  let ticking = false;
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        let currentSectionId = "";
-        let minDistance = Number.POSITIVE_INFINITY;
-        sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          const distance = Math.abs(rect.top - OFFSET);
-          if (rect.top - OFFSET <= 0 && distance < minDistance) {
-            minDistance = distance;
-            currentSectionId = section.id;
-          }
+    // Navbar shrink function
+    var navbarShrink = function () {
+        const navbarCollapsible = document.body.querySelector('#mainNav');
+        if (!navbarCollapsible) {
+            return;
+        }
+        if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove('navbar-shrink')
+        } else {
+            navbarCollapsible.classList.add('navbar-shrink')
+        }
+
+    };
+
+    // Shrink the navbar 
+    navbarShrink();
+
+    // Shrink the navbar when page is scrolled
+    document.addEventListener('scroll', navbarShrink);
+
+    // Activate Bootstrap scrollspy on the main nav element
+    const mainNav = document.body.querySelector('#mainNav');
+    if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#mainNav',
+            rootMargin: '0px 0px -40%',
         });
-        navLinks.forEach(link => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === `#${currentSectionId}`
-          );
-          // For accessibility
-          link.setAttribute(
-            "aria-current",
-            link.getAttribute("href") === `#${currentSectionId}` ? "page" : null
-          );
-        });
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+    };
 
-  // Optional: Reveal sections on scroll (IntersectionObserver)
-  const revealSections = document.querySelectorAll("section[data-reveal]");
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15
-      }
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
     );
-    revealSections.forEach(section => observer.observe(section));
-  }
+    responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+
 });

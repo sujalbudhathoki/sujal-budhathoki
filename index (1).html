@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="./uploads/logo1.png" />
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style1.css">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <li><a href="/"><img src="./uploads/logo1.png" class="logo"></a></li>
+            
+            <ul id="sidemenu">
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact"><span>Contact</span></a></li>
+            </ul>
+            
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+            
+
+            <img class="img" src="./uploads/Samin.png"
+            width="600px";
+            height="700px";
+            object-fit: cover;>
+            </nav>
+            <div class="header-text">
+                <p><span class="dynamic"></span> Developer</p>
+                <h1>नमस्ते!!, म<br><span>Samin Thapa</span></h1>
+            </div>
+        </div>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed(".dynamic",{
+                strings : ["Website", "Front-end", "Next.js"],
+                typeSpeed : 150,
+                backSpeed : 150,
+                loop :true
+            })
+        </script>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./uploads/1.png" 
+                    width="700px";
+                    height="500px" ;
+                    >
+             
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi! I am pursuing a Bachelor of Information Technology from Tribhuvan University with a specialization in Website Development. I am a Full-Stack Developer proficient in the Next.js passionate about building scalable and user-friendly applications.</p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skill</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certificate')">Certificate</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>Languages Known</span><br><br><img src="./uploads/js.png" height="40"> <img src="./uploads/html-5.png" height="40"> <img src="./uploads/css-3.png" height="40"> <img src="./uploads/python.png" height="40"> <img src="./uploads/letter-c.png" height="40"> <img src="./uploads/c-.png" height="40"> </li>
+                            <li><span>Frameworks & Library</span><br><br><img src="./uploads/react.png" height="40"> <img src="./uploads/next.jpg" height="40"> <img src="./uploads/nodejs.png" height="40"> <img src="./uploads/express.png" height="40"> <img src="./uploads/drizzle_orm.jpg" height="40"> <img src="./uploads/prisma.png" height="40"> <img src="./uploads/tailwindcss.jpg" height="40"> <img src="./uploads/bootstrap.png" height="40"> <img src="./uploads/material_ui.jpg" height="40"> </li>
+                            <li><span>DataBase</span><br><br><img src="./uploads/mongodb.jpg" height="40"> <img src="./uploads/mysql.jpg" height="40"> </li>
+                            <li><span>Tools</span><br><br> <img src="./uploads/git.jpg" height="40">  <img src="./uploads/github.jpg" height="40"> <img src="./uploads/cloudflare.jpg" height="40"> <img src="./uploads/netlify.jpg" height="40"> <img src="./uploads/vercel.jpg" height="40"> <img src="./uploads/postman.png" height="40"></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>College Representative at Code For Change</li>
+                            <li><span>2023 - 2024</span><br>College Ambassador at Hackamedia</li>
+                            <li><span>2023 - Current</span><br>Freelancer as Web. Developer</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Bachelor of Information Technology, TU</li>
+                            <li><span>2019 - 2021</span><br>+2 at Computer Science, NEB</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificate">
+                        <ul>
+                            <li><span>CS50: Harvard University ~> </span><a class="certificate" href="./uploads/CS50x.pdf"> View</a></li>
+                            <li><span>Web Development Bootcamp ~> </span><a class="certificate" href="./uploads/hp_boot.pdf"> View</a></li>
+                            <li><span>Graphic Designing WorkShop ~> </span><a class="certificate" href="./uploads/designing.png"> View</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>  
+            <div class="services-list">
+                <div>
+                    <i class="bi bi-book-half"></i>
+                    <h1>Website Development</h1> <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I can turn your website ideas into reality, developing high-quality responsive websites for you and your business. Let me help you save valuable time</p><br>          
+                        <a href="#contact">Contact Me</a>
+                                              
+                </div>
+                <div>
+                    <i class="bi bi-bookmarks-fill"></i>
+                    <h1>Mentor</h1> <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I can serve as a trustworthy mentor for you or your company in website development.</p><br>
+                    <a href="#contact">Contact Me</a>
+                   
+                </div>
+            </div> 
+        </div>
+    </div>
+
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Project</h1>    
+        <div class="work-list">
+
+            <div class="work">
+                <img src="./uploads/car_rental.jpeg">
+                <div class="layer">
+                    <h2>Car Rental</h2>
+                    <h4>Built with Next.js, Clerk for authentication, and Hygraph as the CMS, this car rental platform offers a seamless booking experience.<br> <br>You can look through below link.</h4>
+                <a href="https://car-rental-saminthapa.vercel.app/"><i class="bi bi-link"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="./uploads/stk_travel.jpg">
+                <div class="layer">
+                    <h2>Travel Company</h2>
+                    <h4>Built with Next.js , TypeScript and tailwindCSS, STK Travel offers a seamless platform for discovering nature-based destinations and planning outdoor adventures.<br> <br>You can look through below link.</h4>
+                <a href="https://stk-travel.vercel.app/"><i class="bi bi-link"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="./uploads/yatrax.jpg" >
+            <div class="layer">
+                <i class="bi bi-link"></i> 
+                <h2>IT Company</h2> <br>
+                <h4>Built with Next.js , TypeScript, tailwindCSS, Aceternity UI, Framer Motion and more. <br> <br>You can play through below link.</h4>
+            <a href="https://yatrax.vercel.app/"><i class="bi bi-link"></i></a>
+            </div>
+        </div>               
+            
+        </div>
+        <a href="https://github.com/saminthapa" class="btn">See More</a>
+    </div>
+</div> 
+
+
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="bi bi-envelope"></i> thapakshterysamin@gmail.com </p>
+                <p> <i class="bi bi-whatsapp"></i></i> +977 9768887374 </p> <br>
+                <h1 class="sub-title">Get in touch</h1>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/samin.thapa.90"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/im_saminthapa/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com/SaminThapa10"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/samin-thapa-kshetry-96043425b/"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UC2cIebOuovVdBCD4rKOIiWQ"><i class="bi bi-youtube"></i></a>
+                    <a href="https://github.com/saminthapa"><i class="bi bi-github"></i></a>
+                </div>
+                <a href="./uploads/Samin_Resume.pdf" download  class="btn btn2"><i class="bi bi-file-earmark-arrow-down-fill"></i> Download Resume</a>              
+            </div>
+            <div class="contact-right">
+                <form action="https://api.web3forms.com/submit" method="POST" class="form">
+                    <input type="hidden" name="access_key" value="cd3ba4bd-6a65-4fd9-9085-a1d36f26482f">
+                    <input type="text" name="Name" placeholder="Your Full Name *" required>
+                    <input type="email" name="Email" placeholder="Your Email *" required>
+                    <input type="subject" name="Subject" placeholder="Subject of Your Message">
+                    <textarea name="Message" placeholder="Your Message *" class="contact-inputs" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+              
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#"> &copy;2023 | im_saminthapa | STK </a>
+    </footer>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        
+    }
+    
+  </script> 
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px"; // Adjust this value as needed
+    }
+</script>
+
+ 
+<script>
+    document.addEventListener('mousemove', function(e) {
+    const neonCursor = document.createElement('div');
+    neonCursor.classList.add('neon-cursor');
+    document.body.appendChild(neonCursor);
+
+    let x = e.clientX + window.scrollX; 
+    let y = e.clientY + window.scrollY; 
+
+    neonCursor.style.left = `${x - neonCursor.offsetWidth / 2}px`; 
+    neonCursor.style.top = `${y - neonCursor.offsetHeight / 2}px`; 
+
+    setTimeout(() => {
+        neonCursor.remove();
+    }, 500); 
+});
+</script>
+</body>
+</html>
